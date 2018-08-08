@@ -1,0 +1,17 @@
+
+ifdef H
+define autoreconf
+	(
+	cd $1; \
+		$(patsubst %,echo %,$(2))
+	);
+endef
+endif
+
+define autoreconf
+	echo $(1) $(2)
+	echo $(patsubst %,nimei %,$(2))
+endef
+
+all:
+	$(call autoreconf,/tmp,one two three)

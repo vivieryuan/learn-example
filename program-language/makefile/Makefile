@@ -1,5 +1,6 @@
 
-all:test
+one:
+	echo one
 
-test:test.c
-	gcc $^ -o $@
+two:
+	echo two
